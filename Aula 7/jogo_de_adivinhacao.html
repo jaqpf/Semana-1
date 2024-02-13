@@ -1,0 +1,46 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() {
+
+        document.write("<br>");
+        document.write("<br>");
+}
+
+    function mostra(frase) {
+
+        document.write(frase);
+         pulaLinha();
+}
+
+    var numeroPensado = Math.round(Math.random() * 10);
+    console.log(numeroPensado);
+    //ajuda a testar as duas condições
+
+
+    var maximoTentativas = 3;
+    var tentativaAtual = 1;
+
+    while(tentativaAtual <= maximoTentativas) {
+    var chute = parseInt(prompt("Digite seu chute!"));
+
+      if(chute == numeroPensado) 
+       {
+            alert("Você acertou!");
+
+        tentativaAtual = maximoTentativas;
+
+            } else {
+
+             if (tentativaAtual == 3) {
+                  alert("Número permitido de tentativas ultrapassado! O número era " +numeroPensado);
+              } else {
+                 alert("Errou o chute! Tente novamente");
+              }
+           }
+
+        tentativaAtual++
+    }
+
+</script>
